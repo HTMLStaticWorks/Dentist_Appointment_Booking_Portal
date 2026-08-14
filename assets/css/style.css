@@ -415,12 +415,40 @@ p {
   border-color: rgba(25, 167, 160, 0.35);
 }
 
+.card .service-icon {
+  margin-bottom: 1.25rem;
+  font-size: 1.5rem;
+  color: var(--color-accent);
+}
+
+.card h3 {
+  margin-bottom: 0.75rem;
+}
+
+.card p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 /* Why Choose Us section cards on Home 2 */
 #whyChooseUsSection .card {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+#whyChooseUsSection .card .benefit-img {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  transition: transform var(--transition-base);
+}
+
+#whyChooseUsSection .card:hover .benefit-img {
+  transform: scale(1.08);
 }
 
 .card-flush {
@@ -476,6 +504,15 @@ p {
   transition: all var(--transition-base);
 }
 
+.service-card .service-img {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  transition: transform var(--transition-base);
+}
+
 .service-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-md);
@@ -485,6 +522,10 @@ p {
 .service-card:hover .service-icon {
   background-color: var(--color-accent);
   color: #FFFFFF;
+}
+
+.service-card:hover .service-img {
+  transform: scale(1.08);
 }
 
 .service-card h3 {
@@ -883,7 +924,7 @@ p {
   gap: 0.85rem;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .nav-links {
     display: none;
   }
@@ -1183,6 +1224,18 @@ p {
   font-weight: var(--font-weight-extrabold);
   font-size: 1.1rem;
   margin-bottom: 1.25rem;
+}
+
+.step-card .step-img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  margin-bottom: 1.25rem;
+  transition: transform var(--transition-base);
+}
+
+.step-card:hover .step-img {
+  transform: scale(1.1);
 }
 
 .step-card h3 {
@@ -1994,10 +2047,10 @@ textarea.form-control {
    Columns: Clinic | Navigation | Patient | Contact
    ========================================================================== */
 .site-footer {
-  background-color: var(--color-primary);
-  color: #FFFFFF;
+  background-color: var(--color-bg-alt);
+  color: var(--color-text-body);
   padding: 5rem 0 2rem 0;
-  border-top: 1px solid var(--color-primary-light);
+  border-top: 1px solid var(--color-border);
 }
 
 .footer-grid {
@@ -2008,14 +2061,14 @@ textarea.form-control {
 }
 
 .footer-col h4 {
-  color: #FFFFFF;
+  color: var(--color-text-main);
   font-size: 1.15rem;
   margin-bottom: 1.5rem;
   font-weight: var(--font-weight-bold);
 }
 
 .footer-col p {
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--color-text-body);
   font-size: 0.95rem;
   line-height: 1.7;
 }
@@ -2027,7 +2080,7 @@ textarea.form-control {
 }
 
 .footer-links a {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--color-text-body);
   font-size: 0.95rem;
   transition: color var(--transition-fast), padding-left var(--transition-fast);
 }
@@ -2042,7 +2095,7 @@ textarea.form-control {
   align-items: flex-start;
   gap: 0.75rem;
   margin-bottom: 0.85rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--color-text-body);
   font-size: 0.95rem;
 }
 
@@ -2054,14 +2107,14 @@ textarea.form-control {
 
 .footer-bottom {
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid var(--color-border-subtle);
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
 }
 
 .footer-legal-links {
@@ -2070,11 +2123,30 @@ textarea.form-control {
 }
 
 .footer-legal-links a {
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--color-text-muted);
 }
 
 .footer-legal-links a:hover {
-  color: #FFFFFF;
+  color: var(--color-text-main);
+}
+
+/* Footer Brand Logo overrides to match Header logo */
+.site-footer .brand-logo {
+  color: var(--color-primary) !important;
+}
+
+.site-footer .brand-logo .brand-icon {
+  background-color: var(--color-primary) !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .site-footer .brand-logo {
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .site-footer .brand-logo .brand-icon {
+  background-color: #20C9C0 !important;
+  color: #0A1926 !important;
 }
 
 @media (max-width: 992px) {
@@ -2278,6 +2350,15 @@ textarea.form-control {
   margin-top: 1.25rem;
 }
 
+/* ==========================================================================
+   Footer Social Links Hover Effect
+   ========================================================================== */
+.footer-social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
 .footer-social-links a {
   display: inline-flex;
   align-items: center;
@@ -2297,4 +2378,46 @@ textarea.form-control {
   color: #fff;
   transform: translateY(-4px) scale(1.05);
   box-shadow: 0 4px 12px rgba(32, 201, 192, 0.3);
+}
+
+/* ==========================================================================
+   Scroll to Top Button
+   ========================================================================== */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: var(--shadow-md);
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(15px);
+  transition: opacity var(--transition-base), transform var(--transition-base), background-color var(--transition-fast), box-shadow var(--transition-fast);
+  z-index: 999;
+}
+
+.scroll-top-btn.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.scroll-top-btn:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.scroll-top-btn:active {
+  transform: translateY(0);
 }

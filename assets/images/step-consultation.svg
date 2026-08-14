@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8F7F6" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#19A7A0" />
+      <stop offset="100%" stop-color="#20C9C0" />
+    </linearGradient>
+    <linearGradient id="navyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#12304A" />
+      <stop offset="100%" stop-color="#1A4265" />
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="90" fill="url(#bgGrad)" stroke="#EDF2F7" stroke-width="2"/>
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#20C9C0" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+  
+  <!-- Tooth Model -->
+  <path d="M 80 75 C 80 65, 95 65, 95 72 C 95 65, 110 65, 110 75 C 110 90, 115 100, 107 115 C 104 122, 97 122, 97 115 C 97 105, 93 105, 93 115 C 93 122, 86 122, 83 115 C 75 100, 80 90, 80 75 Z" fill="#FFFFFF" stroke="url(#navyGrad)" stroke-width="4" stroke-linejoin="round"/>
+  
+  <!-- Speech Bubble (Consultation) -->
+  <path d="M 115 55 C 115 42, 132 32, 150 32 C 168 32, 180 42, 180 55 C 180 68, 168 78, 150 78 C 144 78, 138 76, 132 72 L 120 78 L 124 68 C 118 64, 115 60, 115 55 Z" fill="url(#tealGrad)" stroke="url(#navyGrad)" stroke-width="2"/>
+  <!-- Chat lines -->
+  <line x1="135" y1="48" x2="165" y2="48" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  <line x1="135" y1="58" x2="158" y2="58" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Dental Mirror / Examination Tool -->
+  <g transform="translate(-10, 10)">
+    <line x1="60" y1="140" x2="90" y2="110" stroke="url(#navyGrad)" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="90" cy="110" r="14" fill="none" stroke="url(#navyGrad)" stroke-width="4"/>
+    <circle cx="90" cy="110" r="10" fill="#E2E8F0" opacity="0.9"/>
+  </g>
+</svg>

@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileDrawer();
   initCounterAnimations();
   highlightActiveNav();
+  initScrollToTop();
 });
 
 /**
@@ -214,3 +215,33 @@ function showToast(message, type = 'info') {
 }
 
 window.showToast = showToast;
+
+/**
+ * Scroll to Top Button Engine
+ */
+function initScrollToTop() {
+  const scrollBtn = document.createElement('button');
+  scrollBtn.className = 'scroll-top-btn';
+  scrollBtn.setAttribute('aria-label', 'Scroll to Top');
+  scrollBtn.setAttribute('title', 'Scroll to Top');
+  scrollBtn.innerHTML = '<i class="bi bi-chevron-up"></i>';
+  document.body.appendChild(scrollBtn);
+
+  // Show/Hide button on scroll
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      scrollBtn.classList.add('visible');
+    } else {
+      scrollBtn.classList.remove('visible');
+    }
+  });
+
+  // Smooth scroll to top on click
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
+

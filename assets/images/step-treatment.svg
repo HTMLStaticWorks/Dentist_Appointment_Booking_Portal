@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8F7F6" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#19A7A0" />
+      <stop offset="100%" stop-color="#20C9C0" />
+    </linearGradient>
+    <linearGradient id="navyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#12304A" />
+      <stop offset="100%" stop-color="#1A4265" />
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="90" fill="url(#bgGrad)" stroke="#EDF2F7" stroke-width="2"/>
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#20C9C0" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+  
+  <!-- Tooth (Big and Sparkling) -->
+  <path d="M 85 70 C 85 58, 100 58, 100 66 C 100 58, 115 58, 115 70 C 115 88, 122 100, 112 118 C 108 126, 100 126, 100 118 C 100 106, 95 106, 95 118 C 95 126, 87 126, 83 118 C 73 100, 85 88, 85 70 Z" fill="url(#tealGrad)" stroke="url(#navyGrad)" stroke-width="4" stroke-linejoin="round"/>
+  
+  <!-- Sparkles -->
+  <!-- Sparkle 1 -->
+  <path d="M 135 60 L 140 68 L 148 70 L 140 72 L 135 80 L 130 72 L 122 70 L 130 68 Z" fill="#FFE082"/>
+  <!-- Sparkle 2 -->
+  <path d="M 65 90 L 68 95 L 73 96 L 68 97 L 65 102 L 62 97 L 57 96 L 62 95 Z" fill="#FFE082"/>
+  
+  <!-- Magic Wand / Laser tool -->
+  <line x1="45" y1="150" x2="80" y2="115" stroke="url(#navyGrad)" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="80" cy="115" r="5" fill="#FFFFFF"/>
+  <circle cx="85" cy="110" r="10" fill="none" stroke="url(#tealGrad)" stroke-width="2" opacity="0.8"/>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8F7F6" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#19A7A0" />
+      <stop offset="100%" stop-color="#20C9C0" />
+    </linearGradient>
+    <linearGradient id="navyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#12304A" />
+      <stop offset="100%" stop-color="#1A4265" />
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="90" fill="url(#bgGrad)" stroke="#EDF2F7" stroke-width="2"/>
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#20C9C0" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+  
+  <!-- Clipboard -->
+  <rect x="65" y="55" width="70" height="90" rx="6" fill="#FFFFFF" stroke="url(#navyGrad)" stroke-width="4"/>
+  <rect x="85" y="45" width="30" height="15" rx="3" fill="url(#tealGrad)" stroke="url(#navyGrad)" stroke-width="3"/>
+  
+  <!-- Clipboard Check lines -->
+  <!-- Line 1 -->
+  <path d="M 80 85 L 85 90 L 95 80" fill="none" stroke="url(#tealGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="102" y1="85" x2="122" y2="85" stroke="url(#navyGrad)" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Line 2 -->
+  <path d="M 80 110 L 85 115 L 95 105" fill="none" stroke="url(#tealGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="102" y1="110" x2="122" y2="110" stroke="url(#navyGrad)" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Glowing Health Shield -->
+  <path d="M 125 105 C 125 105, 125 135, 145 145 C 165 135, 165 105, 165 105 L 145 98 Z" fill="url(#tealGrad)" stroke="url(#navyGrad)" stroke-width="2"/>
+  <path d="M 137 122 L 142 127 L 153 116" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
