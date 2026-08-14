@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation & Design Guide | Aura Dental Portal</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+</head>
+<body style="background: var(--color-bg-alt); padding: 3rem 1.5rem;">
+  <div class="container" style="max-width: 900px; background: var(--color-bg-surface); padding: 3rem; border-radius: var(--radius-lg); border: 1px solid var(--color-border); box-shadow: var(--shadow-md);">
+    
+    <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--color-border); padding-bottom: 1.5rem; margin-bottom: 2rem;">
+      <div class="brand-logo">
+        <div class="brand-icon"><i class="bi bi-shield-plus"></i></div>
+        <span>Aura<span class="text-accent">Dental</span> Portal</span>
+      </div>
+      <a href="../index.html" class="btn btn-secondary btn-sm"><i class="bi bi-arrow-left"></i> Live Website</a>
+    </div>
+
+    <span class="section-tag"><i class="bi bi-book"></i> Technical Documentation</span>
+    <h1 style="margin-bottom: 1rem; font-size: 2.25rem;">Aura Dental Booking Portal Architecture</h1>
+    <p style="margin-bottom: 2rem; color: var(--color-text-body);">
+      A complete overview of the design tokens, components, file architecture, strict color system, and patient booking dataflow.
+    </p>
+
+    <div style="margin-bottom: 2.5rem;">
+      <h2 style="font-size: 1.4rem; margin-bottom: 0.75rem;">1. Color Palette System</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Role</th>
+            <th>Name</th>
+            <th>Hex Code</th>
+            <th>Usage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Primary</strong></td>
+            <td>Deep Navy Blue</td>
+            <td><code>#12304A</code></td>
+            <td>Headings, Primary Buttons, Navigation, Footer, Badges</td>
+          </tr>
+          <tr>
+            <td><strong>Secondary</strong></td>
+            <td>Clean White / Soft Neutrals</td>
+            <td><code>#FFFFFF / #F8FAFC</code></td>
+            <td>Card backgrounds, crisp borders, contrast text</td>
+          </tr>
+          <tr>
+            <td><strong>Accent</strong></td>
+            <td>Professional Teal</td>
+            <td><code>#19A7A0</code></td>
+            <td>Icons, Focus rings, CTAs, Highlights, Badges</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin-bottom: 2.5rem;">
+      <h2 style="font-size: 1.4rem; margin-bottom: 0.75rem;">2. Section Count & Layout Architecture</h2>
+      <ul style="display: flex; flex-direction: column; gap: 0.75rem; color: var(--color-text-body);">
+        <li>• <strong>index.html (Home 1):</strong> Exactly 6 sections (Hero, Clinic Intro & Stats, 6 Dental Services, 4 Dentists, 3 Testimonials, Appointment CTA).</li>
+        <li>• <strong>pages/home-2.html (Home 2):</strong> Exactly 6 sections (Editorial Split Hero with Subtext, 4 Benefits, 4-Step Treatment Journey, Cosmetic Dentistry Feature, Clinic Experience Showcase, Final CTA).</li>
+        <li>• <strong>All Other Pages:</strong> Exactly 4 sections each (Hero, Core Content Grid/Details, Standards/Approach, Action CTA).</li>
+        <li>• <strong>Patient Portal (pages/dashboard.html):</strong> Interactive responsive client-side app managing appointments, treatment history timeline, reminders, profile, and settings.</li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom: 2.5rem;">
+      <h2 style="font-size: 1.4rem; margin-bottom: 0.75rem;">3. Interactive LocalStorage Sync</h2>
+      <p style="color: var(--color-text-body); font-size: 0.95rem;">
+        When a patient schedules a visit via <code>pages/booking.html</code>, the appointment payload is stored in <code>localStorage.aura_appointments</code>. The <code>pages/dashboard.html</code> reads this in real time, updating the Overview tab metrics, active upcoming bookings, and reschedule/cancellation modals.
+      </p>
+    </div>
+
+    <div style="margin-bottom: 1.5rem;">
+      <h2 style="font-size: 1.4rem; margin-bottom: 0.75rem;">4. Accessibility & Standards</h2>
+      <p style="color: var(--color-text-body); font-size: 0.95rem;">
+        Compliant with WCAG 2.1 AA contrast requirements across both Light Mode and Dark Mode. Fully keyboard navigatable with visible focus states, ARIA landmarks, mobile-first responsive breakpoints (320px–1920px), and RTL support.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

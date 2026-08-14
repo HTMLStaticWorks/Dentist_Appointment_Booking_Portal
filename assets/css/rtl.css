@@ -1,0 +1,103 @@
+/* ==========================================================================
+   AURA DENTAL CLINIC & PATIENT BOOKING PORTAL
+   RTL (Right to Left) Stylesheet (rtl.css)
+   Full Arabic / Hebrew / Persian Internationalization Support
+   ========================================================================== */
+
+[dir="rtl"] {
+  text-align: right;
+  direction: rtl;
+}
+
+[dir="rtl"] .section-header.text-start {
+  text-align: right;
+}
+
+[dir="rtl"] .btn i {
+  transform: rotate(180deg);
+}
+
+[dir="rtl"] .btn:hover i {
+  transform: rotate(180deg) translateX(3px);
+}
+
+[dir="rtl"] .link-learn i {
+  transform: rotate(180deg);
+}
+
+[dir="rtl"] .link-learn:hover i {
+  transform: rotate(180deg) translateX(4px);
+}
+
+/* Offcanvas Drawer */
+[dir="rtl"] .mobile-drawer {
+  right: auto;
+  left: -320px;
+  transition: left var(--transition-smooth);
+}
+
+[dir="rtl"] .mobile-drawer.active {
+  left: 0;
+  right: auto;
+}
+
+/* Stat items */
+[dir="rtl"] .stat-item {
+  border-left: none;
+  border-right: 2px solid var(--color-accent);
+  padding-left: 0;
+  padding-right: 1.25rem;
+}
+
+/* Dashboard Layout */
+[dir="rtl"] .dashboard-sidebar {
+  border-right: none;
+  border-left: 1px solid var(--color-border);
+}
+
+[dir="rtl"] .dash-nav-badge {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+[dir="rtl"] .dash-nav-item {
+  text-align: right;
+}
+
+/* Timeline */
+[dir="rtl"] .timeline {
+  padding-left: 0;
+  padding-right: 2rem;
+}
+
+[dir="rtl"] .timeline::before {
+  left: auto;
+  right: 6px;
+}
+
+[dir="rtl"] .timeline-dot {
+  left: auto;
+  right: -2rem;
+}
+
+/* Tables */
+[dir="rtl"] .data-table {
+  text-align: right;
+}
+
+/* Footer */
+[dir="rtl"] .footer-links a:hover {
+  padding-left: 0;
+  padding-right: 4px;
+}
+
+/* Toast */
+[dir="rtl"] .toast-container {
+  right: auto;
+  left: 2rem;
+}
+
+[dir="rtl"] .toast-item {
+  border-left: none;
+  border-right: 4px solid var(--color-accent);
+}

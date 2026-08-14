@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Register for an Aura Dental Studio patient account. Seamlessly manage appointments, checkup reminders, and treatment history.">
+  <title>Patient Registration | Aura Dental Studio</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body>
+
+  <div class="auth-top-actions">
+    <button class="rtl-toggle-btn" aria-label="Toggle RTL Direction"><i class="bi bi-translate"></i></button>
+    <button class="theme-toggle-btn" aria-label="Toggle Theme"><i class="bi bi-moon-stars"></i></button>
+  </div>
+
+  <main class="auth-wrapper">
+    <div class="auth-card" style="max-width: 540px;">
+      <div class="auth-header">
+        <a href="../index.html" class="brand-logo" style="justify-content: center; margin-bottom: 1rem; text-decoration: none; color: inherit;">
+          <div class="brand-icon"><i class="bi bi-shield-plus"></i></div>
+          <span>Aura<span class="text-accent">Dental</span></span>
+        </a>
+        <h1>Create Patient Account</h1>
+        <p>Register to manage your appointments, view clinical records, and access care instructions.</p>
+      </div>
+
+      <form id="registerForm" onsubmit="event.preventDefault(); window.showToast('Account registered successfully! Redirecting...', 'success'); setTimeout(() => window.location.href='dashboard.html', 1000);">
+        <div class="form-group">
+          <label class="form-label" for="regFullName">Full Legal Name <span class="required">*</span></label>
+          <input type="text" id="regFullName" class="form-control" placeholder="e.g. Sarah Jenkins" required>
+        </div>
+
+        <div class="grid grid-2" style="gap: 1.25rem;">
+          <div class="form-group">
+            <label class="form-label" for="regEmail">Email Address <span class="required">*</span></label>
+            <input type="email" id="regEmail" class="form-control" placeholder="sarah@example.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="regPhone">Phone Number <span class="required">*</span></label>
+            <input type="tel" id="regPhone" class="form-control" placeholder="(555) 234-5678" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="regDob">Date of Birth <span class="required">*</span></label>
+          <input type="date" id="regDob" class="form-control" required>
+        </div>
+
+        <div class="grid grid-2" style="gap: 1.25rem;">
+          <div class="form-group">
+            <label class="form-label" for="regPass">Password <span class="required">*</span></label>
+            <input type="password" id="regPass" class="form-control" placeholder="••••••••" required minlength="8">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="regConfirmPass">Confirm Password <span class="required">*</span></label>
+            <input type="password" id="regConfirmPass" class="form-control" placeholder="••••••••" required minlength="8">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label style="display: flex; align-items: flex-start; gap: 0.65rem; font-size: 0.85rem; cursor: pointer; color: var(--color-text-body);">
+            <input type="checkbox" required style="width: 18px; height: 18px; margin-top: 2px; accent-color: var(--color-accent);">
+            <span>I agree to the <a href="#" style="color: var(--color-accent); font-weight: 600;">Terms of Service</a>, <a href="#" style="color: var(--color-accent); font-weight: 600;">Privacy Policy</a>, and HIPAA patient consent protocols.</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">
+          <i class="bi bi-person-plus-fill"></i> Complete Registration
+        </button>
+      </form>
+
+      <div class="auth-divider" style="display: flex; align-items: center; text-align: center; margin: 1.5rem 0;">
+        <hr style="flex-grow: 1; border: none; border-top: 1px solid var(--color-border); margin-right: 1rem;">
+        <span style="font-size: 0.85rem; color: var(--color-text-body); font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px;">Or continue with</span>
+        <hr style="flex-grow: 1; border: none; border-top: 1px solid var(--color-border); margin-left: 1rem;">
+      </div>
+
+      <div class="auth-social" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+        <button type="button" class="btn" style="background: transparent; border: 1px solid var(--color-border); display: flex; align-items: center; justify-content: center; gap: 0.5rem; color: var(--color-text); padding: 0.75rem; border-radius: 0.5rem; cursor: pointer; transition: background-color 0.2s;">
+          <i class="bi bi-google" style="color: #ea4335;"></i> <span style="font-weight: 600;">Google</span>
+        </button>
+        <button type="button" class="btn" style="background: transparent; border: 1px solid var(--color-border); display: flex; align-items: center; justify-content: center; gap: 0.5rem; color: var(--color-text); padding: 0.75rem; border-radius: 0.5rem; cursor: pointer; transition: background-color 0.2s;">
+          <i class="bi bi-apple"></i> <span style="font-weight: 600;">Apple</span>
+        </button>
+      </div>
+
+      <div class="auth-footer">
+        Already registered? <a href="login.html">Sign in here</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

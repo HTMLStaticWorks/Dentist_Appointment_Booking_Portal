@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aura Dental Studio — New Clinic Branch Opening Soon. Stay tuned for luxury dental appointments.">
+  <title>Opening Soon | Aura Dental Studio</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column; background-color: var(--color-bg-alt);">
+
+  <!-- Site Header Minimal -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main Navigation" style="justify-content: space-between;">
+      <a href="../index.html" class="brand-logo">
+        <div class="brand-icon"><i class="bi bi-shield-plus"></i></div>
+        <span>Aura<span class="text-accent">Dental</span></span>
+      </a>
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle Theme"><i class="bi bi-moon-stars"></i></button>
+        <a href="dashboard.html" class="dashboard-btn" aria-label="Patient Dashboard" title="Patient Dashboard"><i class="bi bi-person"></i></a>
+        <a href="../index.html" class="btn btn-secondary btn-sm"><i class="bi bi-arrow-left"></i> Back to Main Site</a>
+      </div>
+    </nav>
+  </header>
+
+  <main style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 4rem 1.5rem; text-align: center;">
+    <div class="container" style="max-width: 720px;">
+      <span class="section-tag" style="margin-bottom: 0.75rem;"><i class="bi bi-clock-history"></i> Launching Winter 2026</span>
+      <h1 style="font-size: clamp(2.25rem, 4vw + 1rem, 3.25rem); margin-bottom: 1.25rem;">Our New Pacific Heights Suite Is Opening Soon</h1>
+      <p style="color: var(--color-text-body); font-size: 1.15rem; max-width: 580px; margin: 0 auto 2.5rem auto;">
+        We are expanding our luxury clinical facilities to bring compassionate, 3D-guided dentistry closer to you.
+      </p>
+
+      <!-- Live Countdown Timer -->
+      <div class="grid grid-4" style="gap: 1rem; max-width: 540px; margin: 0 auto 3rem auto;">
+        <div class="card" style="padding: 1.25rem; text-align: center;">
+          <div style="font-size: 2.25rem; font-weight: 800; color: var(--color-primary);" id="cdDays">42</div>
+          <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-text-muted); font-weight: 600;">Days</span>
+        </div>
+        <div class="card" style="padding: 1.25rem; text-align: center;">
+          <div style="font-size: 2.25rem; font-weight: 800; color: var(--color-primary);" id="cdHours">18</div>
+          <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-text-muted); font-weight: 600;">Hours</span>
+        </div>
+        <div class="card" style="padding: 1.25rem; text-align: center;">
+          <div style="font-size: 2.25rem; font-weight: 800; color: var(--color-primary);" id="cdMinutes">34</div>
+          <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-text-muted); font-weight: 600;">Minutes</span>
+        </div>
+        <div class="card" style="padding: 1.25rem; text-align: center;">
+          <div style="font-size: 2.25rem; font-weight: 800; color: var(--color-accent);" id="cdSeconds">15</div>
+          <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-text-muted); font-weight: 600;">Seconds</span>
+        </div>
+      </div>
+
+      <!-- Newsletter Notification Form -->
+      <div class="card" style="max-width: 500px; margin: 0 auto 2.5rem auto; padding: 2rem;">
+        <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;"><i class="bi bi-bell text-accent"></i> Be the First to Book</h3>
+        <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 1.25rem;">Enter your email to receive priority access to inaugural opening appointment slots.</p>
+        <form onsubmit="event.preventDefault(); window.showToast('You are on the VIP priority list!', 'success'); this.reset();" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <input type="email" class="form-control" placeholder="your.email@example.com" style="flex: 1; min-width: 220px;" required>
+          <button type="submit" class="btn btn-primary">Notify Me</button>
+        </form>
+      </div>
+
+      <!-- Contact Info Snippet -->
+      <div style="font-size: 0.925rem; color: var(--color-text-muted);">
+        Questions? Call our concierge team at <strong style="color: var(--color-primary);">(800) 555-DENT</strong> or email <strong style="color: var(--color-primary);">concierge@auradental.com</strong>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" style="padding: 2rem 0; margin-top: auto;">
+    <div class="container" style="text-align: center; font-size: 0.875rem; color: rgba(255,255,255,0.65);">
+      &copy; 2026 Aura Dental Studio. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+    // Live Countdown Timer logic
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 42);
+    targetDate.setHours(targetDate.getHours() + 18);
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const difference = targetDate.getTime() - now;
+
+      if (difference > 0) {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        document.getElementById('cdDays').textContent = days;
+        document.getElementById('cdHours').textContent = hours < 10 ? '0' + hours : hours;
+        document.getElementById('cdMinutes').textContent = minutes < 10 ? '0' + minutes : minutes;
+        document.getElementById('cdSeconds').textContent = seconds < 10 ? '0' + seconds : seconds;
+      }
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+</body>
+</html>

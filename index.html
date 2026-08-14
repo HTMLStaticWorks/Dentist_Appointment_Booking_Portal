@@ -1,1 +1,532 @@
-vdgfvgdr
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aura Dental Studio — High-end dental clinic offering comprehensive general, cosmetic, orthodontic, and implant dental care. Book your appointment online today.">
+  <meta name="keywords" content="dentist, dental clinic, dental implants, teeth whitening, cosmetic dentistry, orthodontics, book dentist appointment">
+  <meta property="og:title" content="Aura Dental Studio | Exceptional Dental Care. A Healthier Smile.">
+  <meta property="og:description" content="Experience modern, gentle, and luxury dental care with board-certified specialists. Online appointment booking and patient portal.">
+  <meta property="og:type" content="website">
+  <title>Aura Dental Studio | Exceptional Dental Care. A Healthier Smile.</title>
+
+  <!-- Favicon Icon -->
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar" aria-label="Main Navigation">
+      <a href="index.html" class="brand-logo" id="brandLogo">
+        <div class="brand-icon"><i class="bi bi-shield-plus"></i></div>
+        <span>Aura<span class="text-accent">Dental</span></span>
+      </a>
+
+      <!-- Desktop Navigation Links: Home | Services | Dentists | About | Contact -->
+            <ul id="navHome" class="nav-links" id="desktopNavLinks">
+        <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+        <li class="nav-item"><a href="pages/home-2.html" class="nav-link">Home 2</a></li>
+        <li class="nav-item"><a href="pages/services.html" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="pages/dentists.html" class="nav-link">Dentists</a></li>
+        <li class="nav-item"><a href="pages/about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="pages/gallery.html" class="nav-link">Gallery</a></li>
+        <li class="nav-item"><a href="pages/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Nav Actions: Theme Toggle, RTL Toggle, Login, Book Now -->
+      <div class="nav-actions">
+        <button class="rtl-toggle-btn" id="btnRtlToggle" aria-label="Toggle RTL Direction" title="Toggle Right-to-Left">
+          <i class="bi bi-translate"></i>
+        </button>
+        <button class="theme-toggle-btn" id="btnThemeToggle" aria-label="Toggle Light/Dark Theme" title="Toggle Dark/Light Mode">
+          <i class="bi bi-moon-stars"></i>
+        </button>
+        <a href="pages/dashboard.html" class="dashboard-btn" id="btnNavDashboard" aria-label="Patient Dashboard" title="Patient Dashboard"><i class="bi bi-person"></i></a>
+        <a href="pages/login.html" class="btn btn-secondary btn-sm" id="btnNavLogin">
+          Login
+        </a>
+        <a href="pages/booking.html" class="btn btn-primary btn-sm" id="btnNavBook">
+          <i class="bi bi-calendar-check"></i> Book Now
+        </a>
+        <button class="hamburger-btn" id="btnHamburger" aria-label="Open Mobile Menu">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon"><i class="bi bi-shield-plus"></i></div>
+        <span>Aura<span class="text-accent">Dental</span></span>
+      </a>
+      <button class="drawer-close-btn" id="btnDrawerClose" aria-label="Close Menu">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+    <div class="drawer-links">
+      <a href="index.html" class="drawer-link active">Home</a>
+      <a href="pages/home-2.html" class="drawer-link">Home 2 (Editorial)</a>
+      <a href="pages/services.html" class="drawer-link">Services</a>
+      <a href="pages/dentists.html" class="drawer-link">Dentists</a>
+      <a href="pages/about.html" class="drawer-link">About Us</a>
+      <a href="pages/gallery.html" class="drawer-link">Clinic Gallery</a>
+      <a href="pages/contact.html" class="drawer-link">Contact</a>
+      <a href="pages/dashboard.html" class="drawer-link">Patient Dashboard</a>
+    </div>
+    <div class="drawer-actions">
+      <a href="pages/login.html" class="btn btn-secondary btn-full">Patient Login</a>
+      <a href="pages/booking.html" class="btn btn-primary btn-full"><i class="bi bi-calendar-check"></i> Book Now</a>
+      <div class="drawer-preference-row">
+        <button class="rtl-toggle-btn" id="btnDrawerRtlToggle" aria-label="Toggle RTL Direction" title="Toggle Right-to-Left">
+          <i class="bi bi-translate"></i>
+        </button>
+        <button class="theme-toggle-btn" id="btnDrawerThemeToggle" aria-label="Toggle Light/Dark Theme" title="Toggle Dark/Light Mode">
+          <i class="bi bi-moon-stars"></i>
+        </button>
+        <a href="pages/dashboard.html" class="dashboard-btn" id="btnDrawerNavDashboard" aria-label="Patient Dashboard" title="Patient Dashboard"><i class="bi bi-person"></i></a>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ==========================================================================
+         SECTION 01: HERO
+         Headline: "Exceptional Dental Care. A Healthier Smile."
+         Supporting paragraph, Buttons "Book Appointment" & "Explore Services", Image
+         ========================================================================== -->
+    <section class="hero-section" id="heroSection" aria-labelledby="heroTitle">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <span class="section-tag"><i class="bi bi-patch-check"></i> Compassionate & Modern Dentistry</span>
+            <h1 id="heroTitle">Exceptional Dental Care. A Healthier Smile.</h1>
+            <p class="hero-lead">
+              Welcome to Aura Dental Studio. We blend gentle patient-first care, award-winning specialists, and cutting-edge 3D digital technology to ensure your dental experience is serene, precise, and comfortable.
+            </p>
+            <div class="hero-actions">
+              <a href="pages/booking.html" class="btn btn-primary btn-lg" id="heroBtnBook">
+                <i class="bi bi-calendar2-check"></i> Book Appointment
+              </a>
+              <a href="pages/services.html" class="btn btn-secondary btn-lg" id="heroBtnServices">
+                <i class="bi bi-arrow-right"></i> Explore Services
+              </a>
+            </div>
+            <div class="hero-trust-badges">
+              <div class="trust-item">
+                <i class="bi bi-shield-check"></i>
+                <div class="trust-text">
+                  Board Certified<br>Specialists
+                </div>
+              </div>
+              <div class="trust-item">
+                <i class="bi bi-star-fill"></i>
+                <div class="trust-text">
+                  4.9 / 5 Rating<br>(1,200+ Reviews)
+                </div>
+              </div>
+              <div class="trust-item">
+                <i class="bi bi-heart-pulse"></i>
+                <div class="trust-text">
+                  Pain-Free<br>Sedation Options
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-image-wrap">
+            <img src="assets/images/hero-1.jpg" alt="Aura Dental Studio Doctor discussing digital 3D scans with a smiling patient" width="800" height="600" loading="eager">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 02: CLINIC INTRODUCTION
+         Short heading, Paragraph, Experience, Patients treated, Qualified dentists
+         ========================================================================== -->
+    <section class="section-padding bg-alt" id="clinicIntroSection" aria-labelledby="introHeading">
+      <div class="container">
+        <div class="grid grid-2" style="align-items: center; gap: 3.5rem;">
+          <div class="card card-flush">
+            <img src="assets/images/clinic-lounge.jpg" alt="Modern welcoming dental reception lounge" class="card-img-top" style="height: 380px;" loading="lazy">
+          </div>
+
+          <div class="intro-content">
+            <span class="section-tag"><i class="bi bi-buildings"></i> High-End Clinical Excellence</span>
+            <h2 id="introHeading">Redefining the Modern Dental Experience</h2>
+            <p style="margin-bottom: 1.25rem;">
+              At Aura Dental Studio, we believe dental visits should inspire confidence rather than anxiety. Our bespoke facility is thoughtfully engineered with calm spa-like architecture, hospital-grade air purification, and low-radiation 3D imaging.
+            </p>
+            <p style="margin-bottom: 2rem;">
+              From routine preventive checkups to complex full-mouth smile restorations, our multidisciplinary team collaborates to deliver gentle treatments tailored specifically to your unique clinical anatomy and aesthetic aspirations.
+            </p>
+
+            <div class="stats-grid">
+              <div class="stat-item">
+                <div class="stat-number" data-count="15" data-suffix="+">15+</div>
+                <div class="stat-label">Years Clinical Experience</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number" data-count="12000" data-suffix="+">12,000+</div>
+                <div class="stat-label">Happy Patients Treated</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number" data-count="8" data-suffix="">8</div>
+                <div class="stat-label">Qualified Specialists</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number" data-count="99" data-suffix="%">99%</div>
+                <div class="stat-label">Patient Satisfaction</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 03: DENTAL SERVICES
+         Show 6 service cards: General Dentistry, Cosmetic Dentistry, Dental Implants,
+         Teeth Whitening, Orthodontics, Root Canal Treatment.
+         ========================================================================== -->
+    <section class="section-padding" id="servicesSection" aria-labelledby="servicesHeading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="bi bi-grid"></i> Comprehensive Care</span>
+          <h2 id="servicesHeading">Our Dental Specializations</h2>
+          <p>
+            Comprehensive preventive, aesthetic, and surgical dental treatments delivered with precision diagnostics and zero-stress comfort protocols.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <!-- 1. General Dentistry -->
+          <article class="service-card" id="serviceCard1">
+            <div class="service-icon"><i class="bi bi-heart-pulse"></i></div>
+            <h3>General Dentistry</h3>
+            <p>Comprehensive oral examinations, gentle ultrasonic hygiene cleanings, composite dental fillings, and diagnostic digital x-rays.</p>
+            <a href="pages/service-details.html" class="link-learn">Learn More <i class="bi bi-arrow-right"></i></a>
+          </article>
+
+          <!-- 2. Cosmetic Dentistry -->
+          <article class="service-card" id="serviceCard2">
+            <div class="service-icon"><i class="bi bi-stars"></i></div>
+            <h3>Cosmetic Dentistry</h3>
+            <p>Custom handcrafted porcelain veneers, composite bonding, gum contouring, and full digital smile design transformations.</p>
+            <a href="pages/service-details.html" class="link-learn">Learn More <i class="bi bi-arrow-right"></i></a>
+          </article>
+
+          <!-- 3. Dental Implants -->
+          <article class="service-card" id="serviceCard3">
+            <div class="service-icon"><i class="bi bi-shield-shaded"></i></div>
+            <h3>Dental Implants</h3>
+            <p>Permanent, natural-looking titanium and zirconia tooth replacements guided by high-resolution 3D CBCT bone mapping.</p>
+            <a href="pages/service-details.html" class="link-learn">Learn More <i class="bi bi-arrow-right"></i></a>
+          </article>
+
+          <!-- 4. Teeth Whitening -->
+          <article class="service-card" id="serviceCard4">
+            <div class="service-icon"><i class="bi bi-brightness-high"></i></div>
+            <h3>Teeth Whitening</h3>
+            <p>Advanced laser-activated in-office brightening treatments and customized take-home trays that lighten enamel up to 8 shades.</p>
+            <a href="pages/service-details.html" class="link-learn">Learn More <i class="bi bi-arrow-right"></i></a>
+          </article>
+
+          <!-- 5. Orthodontics -->
+          <article class="service-card" id="serviceCard5">
+            <div class="service-icon"><i class="bi bi-diagram-3"></i></div>
+            <h3>Orthodontics</h3>
+            <p>Clear Invisalign aligners and discreet ceramic braces for adults and teens to achieve flawless alignment and optimal bite function.</p>
+            <a href="pages/service-details.html" class="link-learn">Learn More <i class="bi bi-arrow-right"></i></a>
+          </article>
+
+          <!-- 6. Root Canal Treatment -->
+          <article class="service-card" id="serviceCard6">
+            <div class="service-icon"><i class="bi bi-activity"></i></div>
+            <h3>Root Canal Treatment</h3>
+            <p>Microscopic endodontic therapy that painlessly eliminates deep infections, relieves toothache, and preserves natural teeth.</p>
+            <a href="pages/service-details.html" class="link-learn">Learn More <i class="bi bi-arrow-right"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 04: DENTISTS
+         Show 3–4 dentist cards: Photo, Name, Specialty, Experience, View Profile
+         ========================================================================== -->
+    <section class="section-padding bg-alt" id="dentistsSection" aria-labelledby="dentistsHeading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="bi bi-person-badge"></i> Expert Clinical Team</span>
+          <h2 id="dentistsHeading">Meet Our Dental Specialists</h2>
+          <p>
+            Our clinic houses board-certified clinicians with ivy-league training and an empathetic, patient-centered approach to oral health.
+          </p>
+        </div>
+
+        <div class="grid grid-4">
+          <!-- Doctor 1 -->
+          <article class="dentist-card" id="doctorCard1">
+            <div class="doctor-img-wrap">
+              <img src="assets/images/dentist-1.jpg" alt="Dr. Eleanor Vance, Lead Prosthodontist" class="doctor-img" loading="lazy">
+            </div>
+            <div class="doctor-info">
+              <span class="doctor-specialty">Lead Prosthodontist</span>
+              <h3>Dr. Eleanor Vance, DDS</h3>
+              <div class="doctor-exp"><i class="bi bi-clock-history"></i> 14+ Years Clinical Experience</div>
+              <div class="doctor-actions">
+                <a href="pages/dentist-details.html" class="btn btn-secondary btn-sm btn-full">View Profile</a>
+                <a href="pages/booking.html?doctor=vance" class="btn btn-primary btn-sm btn-full">Book</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Doctor 2 -->
+          <article class="dentist-card" id="doctorCard2">
+            <div class="doctor-img-wrap">
+              <img src="assets/images/dentist-2.jpg" alt="Dr. Marcus Hayes, Orthodontist Specialist" class="doctor-img" loading="lazy">
+            </div>
+            <div class="doctor-info">
+              <span class="doctor-specialty">Orthodontics & Aligners</span>
+              <h3>Dr. Marcus Hayes, DMD</h3>
+              <div class="doctor-exp"><i class="bi bi-clock-history"></i> 11+ Years Clinical Experience</div>
+              <div class="doctor-actions">
+                <a href="pages/dentist-details.html" class="btn btn-secondary btn-sm btn-full">View Profile</a>
+                <a href="pages/booking.html?doctor=hayes" class="btn btn-primary btn-sm btn-full">Book</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Doctor 3 -->
+          <article class="dentist-card" id="doctorCard3">
+            <div class="doctor-img-wrap">
+              <img src="assets/images/dentist-3.jpg" alt="Dr. Sophia Lin, Cosmetic Dentistry Specialist" class="doctor-img" loading="lazy">
+            </div>
+            <div class="doctor-info">
+              <span class="doctor-specialty">Cosmetic Specialist</span>
+              <h3>Dr. Sophia Lin, DDS</h3>
+              <div class="doctor-exp"><i class="bi bi-clock-history"></i> 9+ Years Clinical Experience</div>
+              <div class="doctor-actions">
+                <a href="pages/dentist-details.html" class="btn btn-secondary btn-sm btn-full">View Profile</a>
+                <a href="pages/booking.html?doctor=lin" class="btn btn-primary btn-sm btn-full">Book</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Doctor 4 -->
+          <article class="dentist-card" id="doctorCard4">
+            <div class="doctor-img-wrap">
+              <img src="assets/images/dentist-4.jpg" alt="Dr. Julian Rivera, Periodontics & Implantologist" class="doctor-img" loading="lazy">
+            </div>
+            <div class="doctor-info">
+              <span class="doctor-specialty">Implantology & Perio</span>
+              <h3>Dr. Julian Rivera, DDS</h3>
+              <div class="doctor-exp"><i class="bi bi-clock-history"></i> 16+ Years Clinical Experience</div>
+              <div class="doctor-actions">
+                <a href="pages/dentist-details.html" class="btn btn-secondary btn-sm btn-full">View Profile</a>
+                <a href="pages/booking.html?doctor=rivera" class="btn btn-primary btn-sm btn-full">Book</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 05: PATIENT TESTIMONIALS
+         Show 2–3 testimonials: Patient name, Short review, Rating
+         ========================================================================== -->
+    <section class="section-padding" id="testimonialsSection" aria-labelledby="testimonialsHeading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="bi bi-chat-quote"></i> Verified Patient Reviews</span>
+          <h2 id="testimonialsHeading">What Our Patients Say</h2>
+          <p>
+            Discover why thousands of individuals and families choose Aura Dental Studio for their lifelong oral wellness.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="testimonial-card">
+            <div>
+              <div class="rating" aria-label="5 out of 5 stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="quote-text">
+                "I used to suffer from severe dental anxiety, but Dr. Vance and her team made me feel completely relaxed from start to finish. The porcelain veneers look so natural and have transformed my confidence."
+              </p>
+            </div>
+            <div class="patient-meta">
+              <div class="patient-avatar">CW</div>
+              <div class="patient-info">
+                <h4>Claire Watson</h4>
+                <span>Cosmetic Patient • Verified</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div>
+              <div class="rating" aria-label="5 out of 5 stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="quote-text">
+                "The 3D scanning technology and digital consultation were incredible. Dr. Hayes explained my Invisalign treatment plan clearly, and I was able to complete the whole treatment in just 8 months."
+              </p>
+            </div>
+            <div class="patient-meta">
+              <div class="patient-avatar">DM</div>
+              <div class="patient-info">
+                <h4>David Miller</h4>
+                <span>Invisalign Patient • Verified</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div>
+              <div class="rating" aria-label="5 out of 5 stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="quote-text">
+                "Seamless online booking and the patient portal makes tracking appointments and dental history effortless. Truly the cleanest and most professional dental clinic I have ever visited."
+              </p>
+            </div>
+            <div class="patient-meta">
+              <div class="patient-avatar">RK</div>
+              <div class="patient-info">
+                <h4>Rachel Kim</h4>
+                <span>General Dentistry • Verified</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 06: APPOINTMENT CTA
+         Headline: "Ready to Take Care of Your Smile?"
+         Short supporting text, Primary button: "Book an Appointment", Secondary: "Call Clinic"
+         ========================================================================== -->
+    <section class="section-padding-sm" id="ctaSection" aria-labelledby="ctaHeading">
+      <div class="container">
+        <div class="cta-banner">
+          <span class="section-tag" style="color: #20C9C0;"><i class="bi bi-calendar-heart"></i> Reserve Your Spot</span>
+          <h2 id="ctaHeading">Ready to Take Care of Your Smile?</h2>
+          <p>
+            Schedule your comprehensive dental consultation or routine hygiene visit in under two minutes using our real-time booking engine.
+          </p>
+          <div class="cta-actions">
+            <a href="pages/booking.html" class="btn btn-primary btn-lg" id="btnCtaBook">
+              <i class="bi bi-calendar2-check"></i> Book an Appointment
+            </a>
+            <a href="tel:+18005553368" class="btn btn-secondary btn-lg" id="btnCtaCall">
+              <i class="bi bi-telephone"></i> Call Clinic: (800) 555-DENT
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer: Clinic | Navigation | Patient | Contact -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Clinic -->
+        <div class="footer-col">
+          <div class="brand-logo" style="color: #FFFFFF; margin-bottom: 1.25rem;">
+            <div class="brand-icon" style="background: var(--color-accent);"><i class="bi bi-shield-plus"></i></div>
+            <span>Aura<span class="text-accent">Dental</span></span>
+          </div>
+          <p>
+            Aura Dental Studio provides bespoke, gentle, and technologically advanced dental healthcare in a calm, modern environment.
+          </p>
+          <div class="footer-social-links">
+            <a href="#" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="X (Twitter)" title="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="pages/services.html">Services</a>
+            <a href="pages/dentists.html">Dentists</a>
+            <a href="pages/about.html">About Us</a>
+            <a href="pages/contact.html">Contact</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Patient -->
+        <div class="footer-col">
+          <h4>Patient Portal</h4>
+          <div class="footer-links">
+            <a href="pages/booking.html">Book Appointment</a>
+            <a href="pages/login.html">Patient Login</a>
+            <a href="pages/register.html">Register Account</a>
+            <a href="pages/dashboard.html">My Dashboard</a>
+            <a href="pages/forgot-password.html">Forgot Password</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Contact -->
+        <div class="footer-col">
+          <h4>Contact & Hours</h4>
+          <div class="footer-contact-item">
+            <i class="bi bi-geo-alt"></i>
+            <span>450 Prestige Boulevard, Suite 400<br>San Francisco, CA 94103</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone"></i>
+            <span>(800) 555-DENT / (555) 234-8900</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-clock"></i>
+            <span>Mon – Fri: 8:00 AM – 6:00 PM<br>Sat: 9:00 AM – 3:00 PM (Sun Closed)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Aura Dental Studio. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">HIPAA Compliance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

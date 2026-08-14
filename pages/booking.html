@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book an appointment online with Aura Dental Studio. Instant real-time doctor scheduling and automatic patient portal sync.">
+  <title>Book an Appointment | Aura Dental Studio</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main Navigation">
+      <a href="../index.html" class="brand-logo">
+        <div class="brand-icon"><i class="bi bi-shield-plus"></i></div>
+        <span>Aura<span class="text-accent">Dental</span></span>
+      </a>
+            <ul class="nav-links">
+        <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="home-2.html" class="nav-link">Home 2</a></li>
+        <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="dentists.html" class="nav-link">Dentists</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="rtl-toggle-btn" aria-label="Toggle RTL Direction"><i class="bi bi-translate"></i></button>
+        <button class="theme-toggle-btn" aria-label="Toggle Theme"><i class="bi bi-moon-stars"></i></button>
+        <a href="dashboard.html" class="dashboard-btn" aria-label="Patient Dashboard" title="Patient Dashboard"><i class="bi bi-person"></i></a>
+        <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
+        <a href="booking.html" class="btn btn-primary btn-sm active"><i class="bi bi-calendar-check"></i> Book Now</a>
+        <button class="hamburger-btn" aria-label="Open Menu"><i class="bi bi-list"></i></button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <div class="drawer-header">
+      <a href="../index.html" class="brand-logo">
+        <div class="brand-icon"><i class="bi bi-shield-plus"></i></div>
+        <span>Aura<span class="text-accent">Dental</span></span>
+      </a>
+      <button class="drawer-close-btn"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="drawer-links">
+      <a href="../index.html" class="drawer-link">Home</a>
+      <a href="home-2.html" class="drawer-link">Home 2 (Editorial)</a>
+      <a href="services.html" class="drawer-link">Services</a>
+      <a href="dentists.html" class="drawer-link">Dentists</a>
+      <a href="about.html" class="drawer-link">About Us</a>
+      <a href="gallery.html" class="drawer-link">Clinic Gallery</a>
+      <a href="contact.html" class="drawer-link">Contact</a>
+      <a href="dashboard.html" class="drawer-link">Patient Dashboard</a>
+    </div>
+    <div class="drawer-actions">
+      <a href="login.html" class="btn btn-secondary btn-full">Patient Login</a>
+      <a href="booking.html" class="btn btn-primary btn-full"><i class="bi bi-calendar-check"></i> Book Now</a>
+      <div class="drawer-preference-row">
+        <button class="rtl-toggle-btn" aria-label="Toggle RTL Direction"><i class="bi bi-translate"></i></button>
+        <button class="theme-toggle-btn" aria-label="Toggle Theme"><i class="bi bi-moon-stars"></i></button>
+        <a href="dashboard.html" class="dashboard-btn" aria-label="Patient Dashboard" title="Patient Dashboard"><i class="bi bi-person"></i></a>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ==========================================================================
+         SECTION 1: BOOKING HERO
+         ========================================================================== -->
+    <section class="page-hero" id="bookingHero">
+      <div class="container">
+        <span class="section-tag"><i class="bi bi-calendar-heart"></i> Simple & Secure</span>
+        <h1>Book Your Dental Visit Online</h1>
+        <p>Select your procedure, choose your preferred specialist, and reserve your real-time slot in under two minutes.</p>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: BOOKING FORM (Step Wizard)
+         ========================================================================== -->
+    <section class="section-padding" id="bookingWizardSection">
+      <div class="container">
+        <div class="booking-layout">
+          <!-- Main Wizard Form Container -->
+          <div class="wizard-card" id="bookingWizardForm">
+            <!-- Progress Steps Indicator -->
+            <div class="wizard-steps" aria-label="Booking Progress">
+              <div class="wizard-step-item active" data-step="1">
+                <div class="step-circle">1</div>
+                <div class="step-title">Service & Doctor</div>
+              </div>
+              <div class="wizard-step-item" data-step="2">
+                <div class="step-circle">2</div>
+                <div class="step-title">Date & Time</div>
+              </div>
+              <div class="wizard-step-item" data-step="3">
+                <div class="step-circle">3</div>
+                <div class="step-title">Patient Info</div>
+              </div>
+              <div class="wizard-step-item" data-step="4">
+                <div class="step-circle">4</div>
+                <div class="step-title">Review & Confirm</div>
+              </div>
+            </div>
+
+            <!-- STEP 1: Select Service & Doctor -->
+            <div class="wizard-step-panel" id="stepPanel1">
+              <h3 style="margin-bottom: 0.5rem;">Select Treatment & Specialist</h3>
+              <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 2rem;">Please choose the nature of your visit and your preferred clinician.</p>
+
+              <div class="form-group">
+                <label for="bookingService" class="form-label">Dental Service / Treatment <span class="required">*</span></label>
+                <select id="bookingService" class="form-select" required>
+                  <option value="Cosmetic Dentistry & Smile Design">Cosmetic Dentistry & Smile Design (Veneers / Bonding)</option>
+                  <option value="Comprehensive Dental Cleaning & Hygiene">Comprehensive Dental Cleaning & Hygiene (Prophylaxis)</option>
+                  <option value="Dental Implants & Consultation">Dental Implants & Bone Consultation</option>
+                  <option value="Invisalign & Orthodontic Assessment">Invisalign & Orthodontic Assessment</option>
+                  <option value="Professional Laser Teeth Whitening">Professional Laser Teeth Whitening</option>
+                  <option value="Root Canal Therapy Consultation">Root Canal Therapy Consultation</option>
+                  <option value="Emergency Toothache & Pain Relief">Emergency Toothache & Pain Relief</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="bookingDoctor" class="form-label">Preferred Specialist <span class="required">*</span></label>
+                <select id="bookingDoctor" class="form-select" required>
+                  <option value="Dr. Eleanor Vance, DDS (Lead Prosthodontist)">Dr. Eleanor Vance, DDS (Lead Prosthodontist & Smile Specialist)</option>
+                  <option value="Dr. Marcus Hayes, DMD (Orthodontics & Aligners)">Dr. Marcus Hayes, DMD (Orthodontics & Clear Aligners)</option>
+                  <option value="Dr. Sophia Lin, DDS (Cosmetic Dentistry)">Dr. Sophia Lin, DDS (Cosmetic & Micro-Dentistry)</option>
+                  <option value="Dr. Julian Rivera, DDS (Implantologist & Perio)">Dr. Julian Rivera, DDS (Implantology & Periodontics)</option>
+                  <option value="First Available Specialist">First Available Specialist (Earliest Appointment)</option>
+                </select>
+              </div>
+
+              <div style="display: flex; justify-content: flex-end; margin-top: 2rem;">
+                <button type="button" class="btn btn-primary btn-step-next" data-next-from="1">
+                  Next: Select Date & Time <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 2: Select Date & Available Time Slots -->
+            <div class="wizard-step-panel" id="stepPanel2" style="display: none;">
+              <h3 style="margin-bottom: 0.5rem;">Choose Date & Preferred Time</h3>
+              <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 2rem;">Our scheduling system shows real-time available operatory slots.</p>
+
+              <div class="form-group">
+                <label for="bookingDate" class="form-label">Preferred Date <span class="required">*</span></label>
+                <input type="date" id="bookingDate" class="form-control" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Available Time Slots <span class="required">*</span></label>
+                <div class="time-slots-grid">
+                  <button type="button" class="time-slot-btn selected" data-time="09:00 AM">09:00 AM</button>
+                  <button type="button" class="time-slot-btn" data-time="10:00 AM">10:00 AM</button>
+                  <button type="button" class="time-slot-btn" data-time="11:30 AM">11:30 AM</button>
+                  <button type="button" class="time-slot-btn" data-time="01:30 PM">01:30 PM</button>
+                  <button type="button" class="time-slot-btn" data-time="02:45 PM">02:45 PM</button>
+                  <button type="button" class="time-slot-btn" data-time="04:15 PM">04:15 PM</button>
+                </div>
+              </div>
+
+              <div style="display: flex; justify-content: space-between; margin-top: 2rem;">
+                <button type="button" class="btn btn-secondary btn-step-prev" data-prev-from="2">
+                  <i class="bi bi-arrow-left"></i> Back
+                </button>
+                <button type="button" class="btn btn-primary btn-step-next" data-next-from="2">
+                  Next: Patient Information <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 3: Patient Information & Notes -->
+            <div class="wizard-step-panel" id="stepPanel3" style="display: none;">
+              <h3 style="margin-bottom: 0.5rem;">Patient Details</h3>
+              <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 2rem;">Please enter your contact details to register this reservation.</p>
+
+              <div class="form-group">
+                <label class="form-label">Are you a new or returning patient?</label>
+                <div style="display: flex; gap: 2rem;">
+                  <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                    <input type="radio" name="patientType" value="New Patient" checked> New Patient
+                  </label>
+                  <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                    <input type="radio" name="patientType" value="Returning Patient"> Returning Patient
+                  </label>
+                </div>
+              </div>
+
+              <div class="grid grid-2" style="gap: 1.25rem;">
+                <div class="form-group">
+                  <label for="patientName" class="form-label">Full Legal Name <span class="required">*</span></label>
+                  <input type="text" id="patientName" class="form-control" placeholder="e.g. Sarah Jenkins" required>
+                </div>
+                <div class="form-group">
+                  <label for="patientDob" class="form-label">Date of Birth</label>
+                  <input type="date" id="patientDob" class="form-control">
+                </div>
+              </div>
+
+              <div class="grid grid-2" style="gap: 1.25rem;">
+                <div class="form-group">
+                  <label for="patientEmail" class="form-label">Email Address <span class="required">*</span></label>
+                  <input type="email" id="patientEmail" class="form-control" placeholder="sarah.jenkins@example.com" required>
+                </div>
+                <div class="form-group">
+                  <label for="patientPhone" class="form-label">Phone Number <span class="required">*</span></label>
+                  <input type="tel" id="patientPhone" class="form-control" placeholder="(555) 234-5678" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="bookingNotes" class="form-label">Clinical Notes or Symptoms (Optional)</label>
+                <textarea id="bookingNotes" class="form-control" placeholder="Describe any dental sensitivity, cosmetic goals, or dental anxiety so our clinical team can prepare..."></textarea>
+              </div>
+
+              <div style="display: flex; justify-content: space-between; margin-top: 2rem;">
+                <button type="button" class="btn btn-secondary btn-step-prev" data-prev-from="3">
+                  <i class="bi bi-arrow-left"></i> Back
+                </button>
+                <button type="button" class="btn btn-primary btn-step-next" data-next-from="3">
+                  Review & Confirm <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 4: Review & Live Confirmation -->
+            <div class="wizard-step-panel" id="stepPanel4" style="display: none;">
+              <h3 style="margin-bottom: 0.5rem;">Review & Confirm Your Reservation</h3>
+              <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 2rem;">Please double-check your appointment information below before finalizing.</p>
+
+              <div style="background: var(--color-bg-alt); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 1.75rem; margin-bottom: 2rem;">
+                <div class="summary-list">
+                  <div class="summary-row">
+                    <span class="summary-label">Treatment Service:</span>
+                    <span class="summary-val" id="revService">Cosmetic Dentistry</span>
+                  </div>
+                  <div class="summary-row">
+                    <span class="summary-label">Specialist:</span>
+                    <span class="summary-val" id="revDoctor">Dr. Eleanor Vance</span>
+                  </div>
+                  <div class="summary-row">
+                    <span class="summary-label">Date & Time:</span>
+                    <span class="summary-val text-accent" id="revDateTime">Pending</span>
+                  </div>
+                  <div class="summary-row">
+                    <span class="summary-label">Patient Name:</span>
+                    <span class="summary-val" id="revPatient">Sarah Jenkins</span>
+                  </div>
+                  <div class="summary-row">
+                    <span class="summary-label">Contact:</span>
+                    <span class="summary-val" id="revContact">sarah.jenkins@example.com</span>
+                  </div>
+                  <div class="summary-row">
+                    <span class="summary-label">Special Notes:</span>
+                    <span class="summary-val" id="revNotes">None provided.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div style="display: flex; justify-content: space-between; margin-top: 2rem;">
+                <button type="button" class="btn btn-secondary btn-step-prev" data-prev-from="4">
+                  <i class="bi bi-arrow-left"></i> Edit Details
+                </button>
+                <button type="button" class="btn btn-primary" id="btnConfirmAppointment">
+                  <i class="bi bi-check-circle-fill"></i> Confirm & Book Appointment
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 3: APPOINTMENT SUMMARY (Sticky Sidebar) -->
+          <aside class="summary-card" aria-label="Appointment Summary">
+            <h3><i class="bi bi-card-checklist text-accent"></i> Booking Summary</h3>
+            <div class="summary-list">
+              <div class="summary-row">
+                <span class="summary-label">Service:</span>
+                <span class="summary-val" id="summaryService">Cosmetic Dentistry</span>
+              </div>
+              <div class="summary-row">
+                <span class="summary-label">Doctor:</span>
+                <span class="summary-val" id="summaryDoctor">Dr. Eleanor Vance</span>
+              </div>
+              <div class="summary-row">
+                <span class="summary-label">Date:</span>
+                <span class="summary-val" id="summaryDate">Tomorrow</span>
+              </div>
+              <div class="summary-row">
+                <span class="summary-label">Time:</span>
+                <span class="summary-val text-accent" id="summaryTime">10:00 AM</span>
+              </div>
+              <div class="summary-row">
+                <span class="summary-label">Patient:</span>
+                <span class="summary-val" id="summaryPatient">Guest Patient</span>
+              </div>
+            </div>
+
+            <div class="summary-assurance">
+              <div><i class="bi bi-shield-check"></i> Instant Patient Dashboard Sync</div>
+              <div><i class="bi bi-clock-history"></i> Free Cancellation up to 24h before</div>
+              <div><i class="bi bi-credit-card"></i> Zero Booking Fees Required</div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: CONTACT / REASSURANCE
+         ========================================================================== -->
+    <section class="section-padding bg-alt" id="bookingReassuranceSection">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="bi bi-info-circle"></i> Patient Care Guarantee</span>
+          <h2>Seamless Booking & Patient Reassurance</h2>
+          <p>We make your dental journey transparent, flexible, and completely stress-free.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card">
+            <div class="service-icon"><i class="bi bi-file-earmark-medical"></i></div>
+            <h3>Insurance & Direct Billing</h3>
+            <p>We work with all major dental PPO insurance plans and handle all claims processing directly on your behalf.</p>
+          </div>
+
+          <div class="card">
+            <div class="service-icon"><i class="bi bi-calendar-x"></i></div>
+            <h3>Flexible Rescheduling</h3>
+            <p>Plans change. Easily reschedule or cancel your visit through your online patient portal without penalty up to 24 hours prior.</p>
+          </div>
+
+          <div class="card">
+            <div class="service-icon"><i class="bi bi-chat-heart"></i></div>
+            <h3>Need Urgent Assistance?</h3>
+            <p>Experiencing acute dental discomfort? Call our priority dental line directly at <strong>(800) 555-DENT</strong> for same-day emergency slots.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="color: #FFFFFF; margin-bottom: 1.25rem;">
+            <div class="brand-icon" style="background: var(--color-accent);"><i class="bi bi-shield-plus"></i></div>
+            <span>Aura<span class="text-accent">Dental</span></span>
+          </div>
+          <p>Bespoke, gentle, and technologically advanced dental healthcare in a calm, modern environment.</p>
+          <div class="footer-social-links">
+            <a href="#" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="X (Twitter)" title="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="dentists.html">Dentists</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Patient Portal</h4>
+          <div class="footer-links">
+            <a href="booking.html">Book Appointment</a>
+            <a href="login.html">Patient Login</a>
+            <a href="register.html">Register Account</a>
+            <a href="dashboard.html">My Dashboard</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <i class="bi bi-geo-alt"></i>
+            <span>450 Prestige Boulevard, Suite 400<br>San Francisco, CA 94103</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone"></i>
+            <span>(800) 555-DENT</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Aura Dental Studio. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/booking.js"></script>
+</body>
+</html>

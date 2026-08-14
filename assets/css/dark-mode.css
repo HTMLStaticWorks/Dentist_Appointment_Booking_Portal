@@ -1,0 +1,302 @@
+/* ==========================================================================
+   AURA DENTAL CLINIC & PATIENT BOOKING PORTAL
+   Dark Mode Stylesheet (dark-mode.css)
+   WCAG 2.1 AA Compliant Contrast Overrides
+   ========================================================================== */
+
+[data-theme="dark"] {
+  /* Dark Mode Color Overrides */
+  --color-bg-body: #0A1926;
+  --color-bg-alt: #0E2235;
+  --color-bg-surface: #132B41;
+  --color-bg-card: #132B41;
+  --color-border: #1E3F5F;
+  --color-border-subtle: #173450;
+  --color-border-focus: #20C9C0;
+
+  /* High-Contrast Accessible Text */
+  --color-text-main: #F8FAFC;
+  --color-text-body: #CBD5E1;
+  --color-text-muted: #94A3B8;
+  --color-text-inverse: #0A1926;
+  --color-text-on-accent: #0A1926;
+
+  /* Accent Adjustments for Dark Mode */
+  --color-accent: #20C9C0;
+  --color-accent-hover: #3BE2D9;
+  --color-accent-subtle: #0B343D;
+  --color-accent-text: #20C9C0;
+
+  /* Status Colors in Dark Mode */
+  --color-status-success-bg: #0B343D;
+  --color-status-success-text: #20C9C0;
+  --color-status-pending-bg: #1A3650;
+  --color-status-pending-text: #E2E8F0;
+  --color-status-neutral-bg: #10263A;
+  --color-status-neutral-text: #94A3B8;
+
+  /* Shadow Adjustments */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 2px 8px -1px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 8px 24px -4px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 16px 36px -6px rgba(0, 0, 0, 0.7);
+}
+
+/* Header in Dark Mode */
+[data-theme="dark"] .site-header {
+  background-color: rgba(10, 25, 38, 0.95);
+  border-bottom-color: #1E3F5F;
+}
+
+[data-theme="dark"] .brand-logo {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .brand-logo .brand-icon {
+  background-color: #20C9C0;
+  color: #0A1926;
+}
+
+[data-theme="dark"] .nav-link {
+  color: #CBD5E1;
+}
+
+[data-theme="dark"] .nav-link:hover,
+[data-theme="dark"] .nav-link.active {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .theme-toggle-btn,
+[data-theme="dark"] .rtl-toggle-btn,
+[data-theme="dark"] .dashboard-btn {
+  background-color: #132B41;
+  border-color: #1E3F5F;
+  color: #F8FAFC;
+}
+
+[data-theme="dark"] .theme-toggle-btn:hover,
+[data-theme="dark"] .rtl-toggle-btn:hover,
+[data-theme="dark"] .dashboard-btn:hover {
+  background-color: #1A3A58;
+  color: #20C9C0;
+  border-color: #20C9C0;
+}
+
+[data-theme="dark"] .hamburger-btn {
+  color: #F8FAFC;
+}
+
+/* Buttons in Dark Mode */
+[data-theme="dark"] .btn-primary {
+  background-color: #20C9C0;
+  border-color: #20C9C0;
+  color: #0A1926 !important;
+}
+
+[data-theme="dark"] .btn-primary:hover,
+[data-theme="dark"] .btn-primary:focus-visible {
+  background-color: #3BE2D9;
+  border-color: #3BE2D9;
+  color: #0A1926 !important;
+  box-shadow: 0 4px 14px rgba(32, 201, 192, 0.4);
+}
+
+[data-theme="dark"] .btn-secondary {
+  background-color: transparent;
+  color: #F8FAFC !important;
+  border-color: #CBD5E1;
+}
+
+[data-theme="dark"] .btn-secondary:hover,
+[data-theme="dark"] .btn-secondary:focus-visible {
+  background-color: #F8FAFC;
+  color: #0A1926 !important;
+}
+
+/* Link Learns */
+[data-theme="dark"] .link-learn {
+  color: #20C9C0;
+}
+
+[data-theme="dark"] .link-learn:hover {
+  color: #3BE2D9;
+}
+
+/* Forms & Inputs in Dark Mode */
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select {
+  background-color: #0E2235;
+  border-color: #1E3F5F;
+  color: #F8FAFC;
+}
+
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus {
+  border-color: #20C9C0;
+  box-shadow: 0 0 0 3px rgba(32, 201, 192, 0.2);
+}
+
+[data-theme="dark"] .form-control::placeholder {
+  color: #94A3B8;
+  opacity: 1;
+}
+
+[data-theme="dark"] .form-select option {
+  background-color: #0E2235;
+  color: #F8FAFC;
+}
+
+/* Time Slot Buttons */
+[data-theme="dark"] .time-slot-btn {
+  background-color: #0E2235;
+  border-color: #1E3F5F;
+  color: #CBD5E1;
+}
+
+[data-theme="dark"] .time-slot-btn:hover {
+  border-color: #20C9C0;
+  color: #F8FAFC;
+}
+
+[data-theme="dark"] .time-slot-btn.selected {
+  background-color: #20C9C0;
+  border-color: #20C9C0;
+  color: #0A1926;
+  font-weight: 700;
+}
+
+/* Testimonial & Doctor Cards */
+[data-theme="dark"] .testimonial-card,
+[data-theme="dark"] .service-card,
+[data-theme="dark"] .dentist-card,
+[data-theme="dark"] .card,
+[data-theme="dark"] .step-card,
+[data-theme="dark"] .wizard-card,
+[data-theme="dark"] .summary-card,
+[data-theme="dark"] .metric-card {
+  background-color: #132B41;
+  border-color: #1E3F5F;
+}
+
+[data-theme="dark"] .stat-number {
+  color: #20C9C0;
+}
+
+[data-theme="dark"] .step-badge {
+  background-color: #20C9C0;
+  color: #0A1926;
+}
+
+/* Wizard Steps Indicator in Dark Mode */
+[data-theme="dark"] .wizard-step-item.active .step-circle {
+  background-color: #20C9C0;
+  border-color: #20C9C0;
+  color: #0A1926;
+}
+
+[data-theme="dark"] .wizard-step-item.completed .step-circle {
+  background-color: #173E58;
+  border-color: #20C9C0;
+  color: #20C9C0;
+}
+
+/* CTA Banner in Dark Mode */
+[data-theme="dark"] .cta-banner {
+  background-color: #102B44;
+  border: 1px solid #1E3F5F;
+}
+
+/* Dashboard Sidebar & Topbar */
+[data-theme="dark"] .dashboard-sidebar {
+  background-color: #0E2235;
+  border-color: #1E3F5F;
+}
+
+[data-theme="dark"] .dash-nav-item {
+  color: #CBD5E1;
+}
+
+[data-theme="dark"] .dash-nav-item:hover {
+  background-color: #132B41;
+  color: #F8FAFC;
+}
+
+[data-theme="dark"] .dash-nav-item.active {
+  background-color: #20C9C0;
+  color: #0A1926;
+}
+
+[data-theme="dark"] .dash-nav-item.active i {
+  color: #0A1926;
+}
+
+/* Table in Dark Mode */
+[data-theme="dark"] .data-table th {
+  background-color: #0E2235;
+  color: #94A3B8;
+  border-color: #1E3F5F;
+}
+
+[data-theme="dark"] .data-table td {
+  border-color: #1A3650;
+  color: #CBD5E1;
+}
+
+[data-theme="dark"] .data-table tr:hover td {
+  background-color: #173652;
+}
+
+/* Timeline in Dark Mode */
+[data-theme="dark"] .timeline::before {
+  background-color: #1E3F5F;
+}
+
+[data-theme="dark"] .timeline-dot {
+  background-color: #20C9C0;
+  border-color: #132B41;
+  box-shadow: 0 0 0 2px #20C9C0;
+}
+
+[data-theme="dark"] .timeline-content {
+  background-color: #132B41;
+  border-color: #1E3F5F;
+}
+
+[data-theme="dark"] .timeline-notes {
+  background-color: #0E2235;
+  color: #CBD5E1;
+}
+
+/* Badges in Dark Mode */
+[data-theme="dark"] .badge-upcoming {
+  background-color: #173E58;
+  color: #E2E8F0;
+  border-color: #1E4F74;
+}
+
+[data-theme="dark"] .badge-completed {
+  background-color: #172F44;
+  color: #94A3B8;
+  border-color: #1E3F5F;
+}
+
+/* Footer in Dark Mode */
+[data-theme="dark"] .site-footer {
+  background-color: #07131D;
+  border-top-color: #173450;
+}
+
+/* Modals */
+[data-theme="dark"] .modal-dialog {
+  background-color: #132B41;
+  border-color: #1E3F5F;
+}
+
+/* Auth Footer */
+[data-theme="dark"] .auth-footer a {
+  color: #20C9C0;
+}
+
+[data-theme="dark"] .auth-footer a:hover {
+  color: #3BE2D9;
+}
